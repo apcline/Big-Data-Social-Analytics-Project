@@ -5,6 +5,8 @@ library(ggplot2)
 library(tm)
 library(stringr)
 library(SentimentAnalysis)
+install.packages("textTinyR")
+library(textTinyR)
 
 # Load and inspect the dataset
 hotel_reviews <- read.csv("Reviews_sample.csv")
