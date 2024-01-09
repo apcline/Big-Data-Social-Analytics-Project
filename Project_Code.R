@@ -4,6 +4,7 @@ library(dplyr)
 library(ggplot2)
 library(tm)
 library(stringr)
+library(SentimentAnalysis)
 
 # Load and inspect the dataset
 hotel_reviews <- read.csv("Reviews_sample.csv")
@@ -61,3 +62,8 @@ hotel_reviews$Negative_Review <- sapply(hotel_reviews$Negative_Review, function(
   lemmas
 }, USE.NAMES = FALSE)
 
+# -------------------------------------------
+# Analysis and Modeling 
+# -------------------------------------------
+
+# Sentiment Analysis
