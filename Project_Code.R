@@ -31,7 +31,7 @@ hotel_reviews$Negative_Review <- sapply(hotel_reviews$Negative_Review, function(
   words <- words[nchar(words) > 1]
   words
 }, USE.NAMES = FALSE)
-# POS tagging and lemmatization (using the 'textTinyR' package)
+# POS tagging and lemmatization
 hotel_reviews$Positive_Review <- sapply(hotel_reviews$Positive_Review, function(text) {
   tokens <- removePunctuation(tolower(unlist(str_split(text, "\\s+"))))
   tokens <- tokens[!sapply(tokens, function(token) any(grepl("[0-9]", token)))]
