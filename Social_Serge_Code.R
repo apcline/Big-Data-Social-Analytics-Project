@@ -118,12 +118,12 @@ top_negative_words <- head(negative_word_count, 50)
 # Create word clouds
 # For positive reviews
 set.seed(116) # for reproducibility
-wordcloud(words = top_positive_words$word, freq = top_positive_words$n,
+wordcloud(words = top_positive_words$word, freq = top_positive_words$n, random.order = FALSE, 
           scale = c(3, 0.4), max.words = 50, colors = brewer.pal(6, "Dark2"))
 
 # For negative reviews
 set.seed(120) # for reproducibility
-wordcloud(words = top_negative_words$word, freq = top_negative_words$n,
+wordcloud(words = top_negative_words$word, freq = top_negative_words$n, random.order = FALSE,
           scale = c(3, 0.5), max.words = 50, colors = brewer.pal(4, "Dark2"))
 
 ####################
